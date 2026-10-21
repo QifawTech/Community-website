@@ -17,7 +17,7 @@ const Footer = () => {
                 alt="CommunityCircle Logo" 
                 style={{ height: '32px', objectFit: 'contain' }} 
               />
-              <h5 className="fw-bold text-white mb-0">CommunityCircle</h5>
+              <h5 className="fw-bold text-white mb-0">GenFounders</h5>
             </div>
             <p className="text-secondary small lh-lg mb-3 px-3 px-md-0">
               Building a trusted platform where professionals, entrepreneurs, and ambitious individuals connect, collaborate, and grow together.
@@ -69,7 +69,7 @@ const Footer = () => {
                     <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
                 </div>
-                <span className="text-secondary text-start" style={{ fontSize: '13px' }}>hr@qifawtechnologies.com</span>
+                <span className="text-secondary text-start" style={{ fontSize: '13px' }}>info@GenFounders.com</span>
               </div>
 
               {/* Phone */}
@@ -94,7 +94,7 @@ const Footer = () => {
         <div className="row text-center">
           <div className="col-12 px-3">
             <p className="text-secondary small mb-0" style={{ fontSize: '12px' }}>
-              © {new Date().getFullYear()} CommunityCircle. All rights reserved. &nbsp;|&nbsp; Powered by{' '}
+              © {new Date().getFullYear()} GenFounders. All rights reserved. &nbsp;|&nbsp; Powered by{' '}
               <a 
                 href="https://qifawtechnologies.com/" 
                 target="_blank" 

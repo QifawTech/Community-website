@@ -58,7 +58,7 @@ const Navbar = ({ onOpenJoin }) => {
                 style={{ width: '38px', height: '38px' }} 
               />
               <span className="text-white fw-bold fs-6 tracking-wide d-none d-sm-inline" style={{ letterSpacing: '0.3px' }}>
-                Community<span className="text-danger">Circle</span>
+                Gen<span className="text-danger">Founders</span>
               </span>
               <span className="text-white fw-bold fs-6 tracking-wide d-sm-none" style={{ letterSpacing: '0.3px' }}>
                 CC
@@ -167,7 +167,7 @@ const Navbar = ({ onOpenJoin }) => {
                 style={{ width: '32px', height: '32px' }} 
               />
               <span className="text-white fw-bold fs-6">
-                Community<span className="text-danger">Circle</span>
+                Gen<span className="text-danger">Founders</span>
               </span>
             </div>
             <button 

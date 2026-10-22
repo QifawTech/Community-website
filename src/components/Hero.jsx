@@ -20,7 +20,7 @@ const Hero = ({ onOpenJoin }) => {
             {/* Animated Badge */}
             <div className="d-inline-flex align-items-center gap-2 bg-danger bg-opacity-10 text-danger px-3 py-2 rounded-pill fw-semibold mb-3 mb-md-4 shadow-sm" style={{ fontSize: '13px' }}>
               <span className="badge bg-danger rounded-circle p-1"></span>
-              Welcome to CommunityCircle 🚀
+              Welcome to GenFounders 🚀
             </div>
 
             {/* Main Title - Fully Responsive */}

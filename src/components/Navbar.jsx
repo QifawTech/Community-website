@@ -7,7 +7,6 @@ const Navbar = ({ onOpenJoin }) => {
 
   const navItems = ['Home', 'About', 'Why Choose Us', 'Benefits', 'Contact'];
 
-  // Scroll Spy: Page-ஐ ஸ்க்ரோல் செய்யும்போது எந்த செக்ஷனில் இருக்கிறோம் என்று ஆட்டோமேட்டிக்காகக் கண்டுபிடிக்கும்
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map((item) => {
@@ -40,32 +39,37 @@ const Navbar = ({ onOpenJoin }) => {
         style={{ 
           top: '0', 
           zIndex: 1050, 
-          backgroundColor: 'rgba(255, 255, 255, 0.85)', 
-          backdropFilter: 'blur(10px)' 
+          backgroundColor: '#ffffff', 
+          boxShadow: '0 2px 10px rgba(0, 0, 0, 0.05)'
         }}
       >
         <div className="container px-2">
           
-          {/* Responsive Navbar Box */}
-          <div className="d-flex align-items-center justify-content-between px-3 px-md-4 py-2 py-md-3 bg-dark rounded-pill shadow-lg w-100" style={{ maxWidth: '900px', margin: '0 auto' }}>
+          {/* Navbox alone is Dark Black, outside is White */}
+          <div className="d-flex align-items-center justify-content-between px-3 px-md-4 py-2 py-md-3 rounded-pill shadow-lg w-100" style={{ maxWidth: '900px', margin: '0 auto', backgroundColor: '#12161a', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
             
-            {/* Professional Logo & Brand Name */}
             <a href="#home" className="d-flex align-items-center gap-2 text-decoration-none flex-shrink-0">
-              <img 
-                src={logoImage} 
-                alt="Logo" 
-                className="rounded-circle bg-white p-1 object-fit-cover shadow-sm"
-                style={{ width: '38px', height: '38px' }} 
-              />
-              <span className="text-white fw-bold fs-6 tracking-wide d-none d-sm-inline" style={{ letterSpacing: '0.3px' }}>
-                Gen<span className="text-danger">Founders</span>
-              </span>
-              <span className="text-white fw-bold fs-6 tracking-wide d-sm-none" style={{ letterSpacing: '0.3px' }}>
-                CC
+              <div 
+                className="d-flex align-items-center justify-content-center overflow-hidden"
+                style={{ 
+                  width: '38px', 
+                  height: '38px', 
+                  backgroundColor: '#12161a', 
+                  borderRadius: '50%' 
+                }}
+              >
+                <img 
+                  src={logoImage} 
+                  alt="Logo" 
+                  className="w-100 h-100 object-fit-cover"
+                  style={{ backgroundColor: '#12161a', mixBlendMode: 'screen' }} 
+                />
+              </div>
+              <span className="text-white fw-bold fs-6 tracking-wide" style={{ letterSpacing: '0.3px', whiteSpace: 'nowrap' }}>
+                <span className="text-danger">Gen</span>Founders
               </span>
             </a>
 
-            {/* Desktop Nav Links */}
             <div className="d-none d-lg-flex align-items-center gap-3 position-relative">
               {navItems.map((item) => {
                 const isActive = activeItem === item;
@@ -110,22 +114,20 @@ const Navbar = ({ onOpenJoin }) => {
               })}
             </div>
 
-            {/* Right Section: Join Button & Mobile Toggle */}
             <div className="d-flex align-items-center gap-2">
               <button
                 onClick={onOpenJoin}
                 className="btn btn-danger btn-sm px-3 py-1.5 rounded-pill fw-semibold shadow-sm text-nowrap"
                 style={{ fontSize: '12px' }}
               >
-                Join Community
+                Join
               </button>
 
-              {/* Mobile Hamburger Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="btn btn-dark text-white d-lg-none border-0 p-1 fs-5 shadow-none d-flex align-items-center justify-content-center"
+                className="btn text-white d-lg-none border-0 p-1 fs-5 shadow-none d-flex align-items-center justify-content-center"
                 aria-label="Toggle navigation"
-                style={{ width: '38px', height: '38px' }}
+                style={{ width: '38px', height: '38px', backgroundColor: 'transparent' }}
               >
                 ☰
               </button>
@@ -136,38 +138,47 @@ const Navbar = ({ onOpenJoin }) => {
         </div>
       </div>
 
-      {/* Backdrop Overlay for Left Mobile Drawer */}
       {isMobileMenuOpen && (
         <div 
           className="position-fixed top-0 start-0 w-100 h-100 bg-black opacity-50 animate-fade-in"
-          style={{ zIndex: 2000, backdropFilter: 'blur(3px)' }}
+          style={{ zIndex: 2000, backdropFilter: 'blur(3px)', WebkitBackdropFilter: 'blur(3px)' }}
           onClick={() => setIsMobileMenuOpen(false)}
         ></div>
       )}
 
-      {/* Left-Side Sliding Clean Mobile Drawer */}
       <div 
-        className={`position-fixed top-0 start-0 h-100 bg-dark text-white shadow-lg d-lg-none ${isMobileMenuOpen ? 'show' : ''}`}
+        className={`position-fixed top-0 start-0 h-100 text-white shadow-lg d-lg-none ${isMobileMenuOpen ? 'show' : ''}`}
         style={{ 
           width: '280px', 
           zIndex: 2100, 
+          backgroundColor: '#12161a',
           transform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(-100%)',
-          transition: 'transform 0.3s ease-in-out'
+          transition: 'transform 0.3s ease-in-out',
+          WebkitTransform: isMobileMenuOpen ? 'translateX(0)' : 'translateX(-100%)'
         }}
       >
         <div className="p-4 d-flex flex-column h-100">
           
-          {/* Drawer Header with Logo & Close Button */}
           <div className="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom border-secondary border-opacity-25">
             <div className="d-flex align-items-center gap-2">
-              <img 
-                src={logoImage} 
-                alt="Logo" 
-                className="rounded-circle bg-white p-1 object-fit-cover shadow-sm"
-                style={{ width: '32px', height: '32px' }} 
-              />
+              <div 
+                className="d-flex align-items-center justify-content-center overflow-hidden"
+                style={{ 
+                  width: '32px', 
+                  height: '32px', 
+                  backgroundColor: '#12161a', 
+                  borderRadius: '50%' 
+                }}
+              >
+                <img 
+                  src={logoImage} 
+                  alt="Logo" 
+                  className="w-100 h-100 object-fit-cover"
+                  style={{ backgroundColor: '#12161a', mixBlendMode: 'screen' }} 
+                />
+              </div>
               <span className="text-white fw-bold fs-6">
-                Gen<span className="text-danger">Founders</span>
+                <span className="text-danger">Gen</span>Founders
               </span>
             </div>
             <button 
@@ -179,7 +190,6 @@ const Navbar = ({ onOpenJoin }) => {
             </button>
           </div>
 
-          {/* Clean Drawer Links */}
           <div className="d-flex flex-column gap-2 flex-grow-1">
             {navItems.map((item) => {
               const isActive = activeItem === item;
@@ -202,7 +212,6 @@ const Navbar = ({ onOpenJoin }) => {
             })}
           </div>
 
-          {/* Drawer Footer CTA */}
           <div className="pt-3 border-top border-secondary border-opacity-25">
             <button
               onClick={() => {
@@ -219,7 +228,6 @@ const Navbar = ({ onOpenJoin }) => {
         </div>
       </div>
 
-      {/* Global CSS for Smooth Scrolling and Drawer Animations */}
       <style>{`
         html {
           scroll-behavior: smooth;

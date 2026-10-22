@@ -1,9 +1,9 @@
 import React from 'react';
-import logoImage from '../assets/Logo.png'; // உன்னோட லோகோ ஃபைல் பெயர்
+import logoImage from '../assets/Logo.png'; // Unnoda logo file name
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white pt-5 pb-4 position-relative overflow-hidden" id="footer">
+    <footer className="text-white pt-5 pb-4 position-relative overflow-hidden" id="footer" style={{ backgroundColor: '#12161a' }}>
       <div className="container">
         
         {/* Main Footer Content */}
@@ -12,12 +12,25 @@ const Footer = () => {
           {/* Brand Column with Logo */}
           <div className="col-lg-4 col-md-6 text-center text-md-start">
             <div className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
-              <img 
-                src={logoImage} 
-                alt="CommunityCircle Logo" 
-                style={{ height: '32px', objectFit: 'contain' }} 
-              />
-              <h5 className="fw-bold text-white mb-0">GenFounders</h5>
+              <div 
+                className="d-flex align-items-center justify-content-center overflow-hidden"
+                style={{ 
+                  width: '32px', 
+                  height: '32px', 
+                  backgroundColor: '#12161a', 
+                  borderRadius: '50%' 
+                }}
+              >
+                <img 
+                  src={logoImage} 
+                  alt="GenFounders Logo" 
+                  className="w-100 h-100 object-fit-cover"
+                  style={{ backgroundColor: '#12161a', mixBlendMode: 'screen' }} 
+                />
+              </div>
+              <h5 className="fw-bold text-white mb-0">
+                <span className="text-danger">Gen</span>Founders
+              </h5>
             </div>
             <p className="text-secondary small lh-lg mb-3 px-3 px-md-0">
               Building a trusted platform where professionals, entrepreneurs, and ambitious individuals connect, collaborate, and grow together.
@@ -69,7 +82,7 @@ const Footer = () => {
                     <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
                 </div>
-                <span className="text-secondary text-start" style={{ fontSize: '13px' }}>info@GenFounders.com</span>
+                <span className="text-secondary text-start" style={{ fontSize: '13px' }}>info@genfounders.in</span>
               </div>
 
               {/* Phone */}
@@ -94,7 +107,7 @@ const Footer = () => {
         <div className="row text-center">
           <div className="col-12 px-3">
             <p className="text-secondary small mb-0" style={{ fontSize: '12px' }}>
-              © {new Date().getFullYear()} GenFounders. All rights reserved. &nbsp;|&nbsp; Powered by{' '}
+              © {new Date().getFullYear()} <span className="text-danger fw-semibold">Gen</span><span className="text-white fw-semibold">Founders</span>. All rights reserved. &nbsp;|&nbsp; Powered by{' '}
               <a 
                 href="https://qifawtechnologies.com/" 
                 target="_blank" 

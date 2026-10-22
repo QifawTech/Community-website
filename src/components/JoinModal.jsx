@@ -66,7 +66,7 @@ const JoinModal = ({ isOpen, onClose }) => {
         {/* Modal Header */}
         <div className="text-center mb-4">
           <span className="badge bg-danger bg-opacity-10 text-danger px-3 py-1.5 rounded-pill fw-semibold mb-2" style={{ fontSize: '12px' }}>
-            🚀 Join CommunityCircle
+            🚀 Join GenFounders
           </span>
           <h3 className="fw-bold text-dark fs-3 mb-1">Become a Member</h3>
           <p className="text-secondary small mb-0">Fill in your details to get started with our network.</p>

@@ -60,7 +60,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="fw-bold text-dark d-block mb-1" style={{ fontSize: '15px' }}>Community Name</span>
-                    <span className="text-secondary" style={{ fontSize: '14.5px' }}>CommunityCircle Network</span>
+                    <span className="text-secondary" style={{ fontSize: '14.5px' }}>GenFounders</span>
                   </div>
                 </div>
 

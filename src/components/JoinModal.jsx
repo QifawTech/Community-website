@@ -20,8 +20,8 @@ const JoinModal = ({ isOpen, onClose }) => {
     e.preventDefault();
     setLoading(true);
 
-    // Google Apps Script Web App URL
-    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+    // Google Apps Script Web App URL (Updated with your deployed URL)
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzHjPGNfVa1EpIjtUaV0jK1bCsY2lNDSvQilTkwO-iSvQbEkAxdFH6IE4wH3mzHFMx68Q/exec';
 
     try {
       await fetch(scriptURL, {

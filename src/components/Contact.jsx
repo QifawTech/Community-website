@@ -74,7 +74,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="fw-bold text-dark d-block mb-1" style={{ fontSize: '15px' }}>Email Address</span>
-                    <span className="text-secondary" style={{ fontSize: '14.5px' }}>hr@qifawtechnologies.com</span>
+                    <span className="text-secondary" style={{ fontSize: '14.5px' }}>info@genfounders.in</span>
                   </div>
                 </div>
 
@@ -101,7 +101,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="fw-bold text-dark d-block mb-1" style={{ fontSize: '15px' }}>Office Address</span>
-                    <span className="text-secondary lh-sm" style={{ fontSize: '14px' }}>PS. No. 8, First Floor, Beside Zackria Complex, Junction, Central Bustand, Trichy - 620001</span>
+                    <span className="text-secondary lh-sm" style={{ fontSize: '14px' }}>P8,TS.No.8, First Floor, Beside Zackria Complex, Junction, Central Bustand, Trichy - 620001</span>
                   </div>
                 </div>
               </div>
